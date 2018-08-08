@@ -1,0 +1,30 @@
+language: node_js
+dist: trusty
+nodejs:
+- 8.9.1
+sudo: required
+branches:
+  only:
+  - master
+stages:
+- name: deploy
+  if: branch = master AND type = push
+before_install:
+- pushd functions
+install:
+- npm install -g firebase-tools
+- yarn
+script:
+- yarn test
+before_deploy:
+- popd
+- npm install --prefix ./functions
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: "$FIREBASE_TOKEN"
+  project: default
+env:
+  matrix:
+    secure: CKqXyHEbb0E5g30GLtQE6kwwZ40HNrdPebUvbhhLGYiJCBESW1G6GwgFAq0nfjYHcbxgu82jIZiU3USQf0QxWx1JEt9EDvwQON9pOyxyT9qDVVH9H9OFD26tVNfiBSQcsKzeuek4b1FYyoZWIlq91HpLi+3SlAF5eXbihSgVA+Wn+NIOr8LPGi+8/Gx9Criooz/KOPJvjp9gciY3ZtpSs8pSWYQSGPMRN7mBWHZe86einiu2Nzow3FKRiYHXuURgym5w4T204yx0v2ywOaD4Oj7X9MY0vGc3QJtUHF0yQsyZ0Te+XZaYqb1q9xg0nLU8jO5YouyJZna2SnHp0tCDKsyjXsEstikwWTAhzbFuCtpRfSfgRJ+OHgfhIINFc7pmQe//E65pW0VCBLeG2TqNtZyHIyaxpI+qMU/ra9Cp96KHUgzQRfEKnLy4QOB/ole8gmLx8tfg6FEjLjpSonulOLG2Rjzcqn/hNeG9I4xLdTeUagBxgs9LLtCq9522jpkIG+lrhgfhTF2YJfkBzdQ4Y+vbYHfJODpE1W8WF8a2a6JaGE/ktoXlAJ7MyFyIOnYY8fQRmxVx3SIuinfJd4DayEsV54vhloE4s4ECc760Jk0Fs8gUtctdliPu9jBaPdtNHK9XcFbmUOlGS64vyPbO65m7vboC+v/QlsInntA+eto=
