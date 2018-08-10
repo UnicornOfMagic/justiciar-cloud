@@ -12,12 +12,10 @@
   },
   "jest": {
     "testMatch": [
-      "<rootDir>/tests/*.spec.js"
+      "<rootDir>/tests/*.spec.js",
+      "<rootDir>/tests/*/*.spec.js"
     ],
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
-    }
+    "testEnvironment": "node"
   },
   "dependencies": {
     "firebase-admin": "~5.13.0",
