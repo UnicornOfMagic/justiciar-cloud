@@ -1,11 +1,11 @@
 const randomstring = require('randomstring');
 
 class Item {
-  constructor(name=this.GetName()) {
+  constructor(name=Item.getName()) {
     this.name = name;
   }
 
-  GetName() {
+  static getName() {
     return randomstring.generate();
   }
 }
