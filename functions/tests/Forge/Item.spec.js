@@ -16,4 +16,9 @@ describe('Item', () => {
     let item = new Item();
     expect(item.name).toEqual('random');
   });
+
+  it('should have a random rarity', () => {
+    let item = new Item();
+    expect(item.rarity).not.toBeNull();
+  });
 });
