@@ -1,4 +1,4 @@
-describe('index test', () => {
+describe('functions test', () => {
   let myFunctions;
   beforeEach(() => {
     myFunctions = require('../index');

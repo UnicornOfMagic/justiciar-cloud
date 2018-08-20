@@ -21,4 +21,13 @@ describe('Item', () => {
     let item = new Item();
     expect(item.rarity).not.toBeNull();
   });
+
+  it('should have a random leading adjective', () => {
+    let item = new Item();
+    expect(item.leadingAdjective).not.toBeNull();
+  });
+  it('should have a random trailing adjective', () => {
+    let item = new Item();
+    expect(item.trailingAdjective).not.toBeNull();
+  });
 });
