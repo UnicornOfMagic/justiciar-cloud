@@ -23,6 +23,7 @@ class Item {
       rarity: this.rarity.name,
       leadingAdjective: this.leadingAdjective.name,
       trailingAdjective: this.trailingAdjective.name,
+      itemType: this.itemType.name,
     };
   }
 }

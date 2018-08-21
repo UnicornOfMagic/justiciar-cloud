@@ -40,5 +40,6 @@ describe('Item', () => {
     expect(jsonifiedItem.leadingAdjective).not.toBeUndefined();
     expect(jsonifiedItem.trailingAdjective).not.toBeUndefined();
     expect(jsonifiedItem.rarity).not.toBeUndefined();
+    expect(jsonifiedItem.itemType).not.toBeUndefined();
   });
 });
