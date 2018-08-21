@@ -1,6 +1,7 @@
 const RarityLevels = require('./RarityLevels');
 const LeadingAdjectives = require('./LeadingAdjectives');
 const TrailingAdjectives = require('./TrailingAdjectives');
+const ItemTypes = require('./ItemTypes');
 const randomstring = require('randomstring');
 
 class Item {
@@ -9,6 +10,7 @@ class Item {
     this.rarity = RarityLevels.getRandomRarity();
     this.leadingAdjective = LeadingAdjectives.getRandomAdjective();
     this.trailingAdjective = TrailingAdjectives.getRandomAdjective();
+    this.itemType = ItemTypes.getRandomItemType();
   }
 
   static getName() {

@@ -19,16 +19,20 @@ describe('Item', () => {
 
   it('should have a random rarity', () => {
     let item = new Item();
-    expect(item.rarity).not.toBeNull();
+    expect(item.rarity).not.toBeUndefined();
   });
 
   it('should have a random leading adjective', () => {
     let item = new Item();
-    expect(item.leadingAdjective).not.toBeNull();
+    expect(item.leadingAdjective).not.toBeUndefined();
   });
   it('should have a random trailing adjective', () => {
     let item = new Item();
-    expect(item.trailingAdjective).not.toBeNull();
+    expect(item.trailingAdjective).not.toBeUndefined();
+  });
+  it('should have a random item type', () => {
+    let item = new Item();
+    expect(item.itemType).not.toBeUndefined();
   });
   it('should jsonify itself', () => {
     let item = new Item();
