@@ -19,4 +19,22 @@ describe('functions test', () => {
       myFunctions.helloWorld(req, res);
     });
   });
+
+  describe('forge item', () => {
+    it('should return an item', async (done) => {
+      const req = {header: {type: 'GET'}};
+      const res = {
+        status: (status) => {
+          expect(status).toEqual(200);
+          return res;
+        },
+        json: async (body) => {
+          expect(body.message).toEqual('I made an item!');
+          expect(body.item).not.toBeUndefined();
+          done();
+        },
+      };
+      myFunctions.forgeItem(req, res);
+    });
+  });
 });
