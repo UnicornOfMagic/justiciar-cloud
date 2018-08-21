@@ -132,7 +132,30 @@ const TRAILING_ADJECTIVES = [
 ];
 
 ITEM_TYPES = [{
-  name: 'Something',
+  name: 'Sword'} , {
+  name: 'Helmet'} , {
+  name: 'Shield'} , {
+  name: 'Boots'} , {
+  name: 'Vambraces'} , {
+  name: 'Pauldrons'} , {
+  name: 'Gloves'} , {
+  name: 'Armor'} , {
+  name: 'Greaves'} , {
+  name: 'Jeans'} , {
+  name: 'Crocs'} , {
+  name: 'Bracers'} , {
+  name: 'Hat'} , {
+  name: 'Sunglasses'} , {
+  name: 'Monocle'} , {
+  name: 'Tiara'} , {
+  name: 'Crown'} , {
+  name: 'Fedora'} , {
+  name: 'Machete'} , {
+  name: 'Dagger'} , {
+  name: 'Bow'} , {
+  name: 'Crossbow'} , {
+  name: 'Potato'} , {
+  name: 'Generic'} , {
 }];
 
 module.exports = {RARITY_LEVELS, LEADING_ADJECTIVES, TRAILING_ADJECTIVES, ITEM_TYPES};
