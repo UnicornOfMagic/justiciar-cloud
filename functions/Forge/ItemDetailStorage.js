@@ -4,37 +4,37 @@ const RARITY_LEVELS = [
     readout: 'Worthless',
   }, {
     name: 'Garbage',
-    readout: '',
+    readout: 'Garbage',
   }, {
     name: 'Awful',
-    readout: '',
+    readout: 'Awful',
   }, {
     name: 'Terrible',
-    readout: '',
+    readout: 'Terrible',
   }, {
     name: 'Potato',
-    readout: '',
+    readout: 'Potato',
   }, {
     name: 'Meh',
-    readout: '',
+    readout: 'Meh',
   }, {
     name: 'Generic',
-    readout: '',
+    readout: 'Generic',
   }, {
     name: 'Common',
-    readout: '',
+    readout: 'Common',
   }, {
     name: 'Rare',
-    readout: '',
+    readout: 'Rare',
   }, {
     name: 'Legendary',
-    readout: '',
+    readout: 'Legendary',
   }, {
     name: 'Ancient',
-    readout: '',
+    readout: 'Ancient',
   }, {
     name: 'Demonic',
-    readout: '',
+    readout: 'Demonic',
   }];
 
 const LEADING_ADJECTIVES = [
@@ -43,67 +43,67 @@ const LEADING_ADJECTIVES = [
     readout: '',
   }, {
     name: 'Flaming',
-    readout: '',
+    readout: 'Flaming',
   }, {
     name: 'Freezing',
-    readout: '',
+    readout: 'Freezing',
   }, {
     name: 'Sparking',
-    readout: '',
+    readout: 'Sparking',
   }, {
     name: 'Dull',
-    readout: '',
+    readout: 'Dull',
   }, {
     name: 'Lame',
-    readout: '',
+    readout: 'Lame',
   }, {
     name: 'Weak',
-    readout: '',
+    readout: 'Weak',
   }, {
     name: 'Potato',
-    readout: '',
+    readout: 'Potato',
   }, {
     name: 'Shiny',
-    readout: '',
+    readout: 'Shiny',
   }, {
     name: 'Special',
-    readout: '',
+    readout: 'Special',
   }, {
     name: 'Magical',
-    readout: '',
+    readout: 'Magical',
   }, {
     name: 'Amazing',
-    readout: '',
+    readout: 'Amazing',
   }, {
     name: 'Stupid',
-    readout: '',
+    readout: 'Stupid',
   }, {
     name: 'Awful',
-    readout: '',
+    readout: 'Awful',
   }, {
     name: 'Terrible',
-    readout: '',
+    readout: 'Terrible',
   }, {
     name: 'Garbage',
-    readout: '',
+    readout: 'Garbage',
   }, {
     name: 'Crippling',
-    readout: '',
+    readout: 'Crippling',
   }, {
     name: 'Lacerating',
-    readout: '',
+    readout: 'Lacerating',
   }, {
     name: 'Antagonizing',
-    readout: '',
+    readout: 'Antagonizing',
   }, {
     name: 'Terrifying',
-    readout: '',
+    readout: 'Terrifying',
   }, {
     name: 'Gazing',
-    readout: '',
+    readout: 'Gazing',
   }, {
     name: 'Generic',
-    readout: '',
+    readout: 'Generic',
   },
 ];
 
