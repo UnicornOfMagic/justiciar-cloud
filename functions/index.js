@@ -7,6 +7,7 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 });
 
 exports.forgeItem = functions.https.onRequest((req, res) => {
-  let message = {message: 'I made an item!', item: forge.forgeItem().jsonify()};
+  let item = forge.forgeItem();
+  let message = {message: 'I made an item!', item: item.jsonify(), readout: item.readOut()};
   res.status(200).json(message);
 });

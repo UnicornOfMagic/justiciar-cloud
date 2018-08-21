@@ -31,6 +31,7 @@ describe('functions test', () => {
         json: async (body) => {
           expect(body.message).toEqual('I made an item!');
           expect(body.item).not.toBeUndefined();
+          expect(body.readout).not.toBeUndefined();
           done();
         },
       };

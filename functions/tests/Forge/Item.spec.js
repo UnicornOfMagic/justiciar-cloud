@@ -42,4 +42,13 @@ describe('Item', () => {
     expect(jsonifiedItem.rarity).not.toBeUndefined();
     expect(jsonifiedItem.itemType).not.toBeUndefined();
   });
+  it('should read out full item name', () => {
+    let item = new Item();
+    item.itemType = {readout: 'test'};
+    item.leadingAdjective = {readout: 'leadTest'};
+    item.trailingAdjective = {readout: 'trailTest'};
+    item.rarity = {readout: 'rarityTest'};
+
+    expect(item.readOut()).toEqual('leadTest rarityTest test trailTest');
+  });
 });

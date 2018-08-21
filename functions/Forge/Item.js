@@ -26,6 +26,10 @@ class Item {
       itemType: this.itemType.name,
     };
   }
+
+  readOut() {
+    return `${this.leadingAdjective.readout} ${this.rarity.readout} ${this.itemType.readout} ${this.trailingAdjective.readout}`;
+  }
 }
 
 module.exports = Item;
