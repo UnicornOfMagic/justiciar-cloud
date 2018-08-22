@@ -28,7 +28,7 @@ class Item {
   }
 
   readOut() {
-    return `${this.leadingAdjective.readout} ${this.rarity.readout} ${this.itemType.readout} ${this.trailingAdjective.readout}`;
+    return `${this.rarity.readout} ${this.leadingAdjective.readout} ${this.itemType.readout} ${this.trailingAdjective.readout}`;
   }
 }
 
