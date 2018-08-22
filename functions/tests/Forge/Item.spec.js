@@ -49,6 +49,6 @@ describe('Item', () => {
     item.trailingAdjective = {readout: 'trailTest'};
     item.rarity = {readout: 'rarityTest'};
 
-    expect(item.readOut()).toEqual('leadTest rarityTest test trailTest');
+    expect(item.readOut()).toEqual('rarityTest leadTest test trailTest');
   });
 });
