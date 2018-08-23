@@ -1,5 +1,7 @@
 const RARITY_LEVELS = [
   {
+    name: 'Nothing',
+  }, {
     name: 'Worthless',
     readout: 'Worthless',
   }, {
@@ -40,7 +42,6 @@ const RARITY_LEVELS = [
 const LEADING_ADJECTIVES = [
   {
     name: 'Nothing',
-    readout: '',
   }, {
     name: 'Flaming',
     readout: 'Flaming',
@@ -110,7 +111,6 @@ const LEADING_ADJECTIVES = [
 const TRAILING_ADJECTIVES = [
   {
     name: 'Nothing',
-    readout: '',
   }, {
     name: 'Justice',
     readout: 'of Justice',
