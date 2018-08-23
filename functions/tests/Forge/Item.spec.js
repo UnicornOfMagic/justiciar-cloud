@@ -60,5 +60,15 @@ describe('Item', () => {
     item.itemType = {readout: 'helmet'};
 
     expect(item.readOut()).toEqual('helmet');
+  });
+
+  it('should properly blank without spaces if undefined property', () => {
+    let item = new Item();
+    item.rarity = {readout: 'Rare'};
+    item.leadingAdjective = {readout: undefined};
+    item.trailingAdjective = {readout: undefined};
+    item.itemType = {readout: 'Baby Steaks'};
+
+    expect(item.readOut()).toEqual('Rare Baby Steaks');
   })
 });
