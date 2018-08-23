@@ -28,7 +28,16 @@ class Item {
   }
 
   readOut() {
-    return `${this.rarity.readout} ${this.leadingAdjective.readout} ${this.itemType.readout} ${this.trailingAdjective.readout}`;
+    let rarity = this.rarity.readout;
+    let leadingAdjective = this.leadingAdjective.readout;
+    let itemType = this.itemType.readout;
+    let trailingAdjective = this.trailingAdjective.readout;
+    rarity = rarity ? rarity + ' ' : '';
+    leadingAdjective = leadingAdjective ? leadingAdjective + ' ' : '';
+    itemType = itemType ? itemType + ' ' : '';
+    let itemProperties = [rarity, leadingAdjective, itemType, trailingAdjective];
+    let properReadout = itemProperties.join('');
+    return properReadout[properReadout.length - 1] === ' ' ? properReadout.substring(0, properReadout.length - 1): properReadout;
   }
 }
 
