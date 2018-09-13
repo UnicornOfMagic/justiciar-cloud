@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 const Forge = require('./Forge/Forge');
 const forge = new Forge();
-const cors = require('cors')({origin: true});
+const cors = require('cors')({origin: false});
 
 exports.helloWorld = functions.https.onRequest((request, response) => {
   response.status(200).json({message: 'Hello from Firebase!'});
