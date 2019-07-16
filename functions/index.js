@@ -14,3 +14,9 @@ exports.forgeItem = functions.https.onRequest((req, res) => {
     res.status(200).json(message);
   })
 });
+
+exports.payDay = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    res.status(200).json({message: 'Next PayDay is Friday, July 19th.'});
+  })
+})
