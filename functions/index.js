@@ -19,7 +19,8 @@ exports.forgeItem = functions.https.onRequest((req, res) => {
 
 exports.payDay = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
-    let nextPayDay = calculator.calculateNextPayDay();
+    let now = new Date();
+    let nextPayDay = calculator.calculateNextPayDay(now);
     res.status(200).json({message: 'Next PayDay is ' + nextPayDay});
   })
 })

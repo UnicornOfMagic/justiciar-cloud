@@ -1,8 +1,7 @@
 class Calculator {
-  calculateNextPayDay() {
+  calculateNextPayDay(now) {
     let payDay1 = 6;
     let payDay2 = 21;
-    let now = new Date();
     let done = false;
     let targetPayDate = 0;
 
@@ -19,6 +18,10 @@ class Calculator {
       } else {
         done = true;
       }
+    }
+
+    if (now.getDate() > payDay2) {
+      datetime = new Date(datetime.getMonth() + 2 + '-' + datetime.getDate() + '-' + datetime.getFullYear());
     }
 
     return datetime;
