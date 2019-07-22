@@ -29,5 +29,12 @@ describe('Calculator tests', () => {
       expect(payDay.getMonth()).toBe(0);
       expect(payDay.getDate()).toBe(6);
     })
+
+    it('should return August 6th 2019 when between july 22nd and august 5th', () => {
+      let payDay = calculator.calculateNextPayDay(new Date('07-22-2019'));
+      expect(payDay.getFullYear()).toBe(2019);
+      expect(payDay.getMonth()).toBe(7);
+      expect(payDay.getDate()).toBe(6);
+    })
   });
 });
