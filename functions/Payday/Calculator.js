@@ -5,7 +5,7 @@ class Calculator {
     let done = false;
     let targetPayDate = 0;
     let rolloverToNextMonth = false;
-    let rolloverToNextYear = now.getMonth() == 11;
+    let rolloverToNextYear = now.getMonth() === 11;
     let targetMonth = now.getMonth();
     let targetYear = rolloverToNextYear ? now.getFullYear() + 1 : now.getFullYear();
 
