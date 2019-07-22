@@ -22,5 +22,12 @@ describe('Calculator tests', () => {
       let payDay = calculator.calculateNextPayDay(new Date('01-22-2019'));
       expect(payDay.getMonth()).toBe(1);
     })
+
+    it('should return January 6th of next year when beyond the last payday', () => {
+      let payDay = calculator.calculateNextPayDay(new Date('12-22-2019'));
+      expect(payDay.getFullYear()).toBe(2020);
+      expect(payDay.getMonth()).toBe(0);
+      expect(payDay.getDate()).toBe(6);
+    })
   });
 });
