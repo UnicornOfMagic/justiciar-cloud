@@ -1,6 +1,8 @@
 const functions = require('firebase-functions');
 const Forge = require('./Forge/Forge');
+const Calculator = require('./Payday/Calculator');
 const forge = new Forge();
+const calculator = new Calculator();
 const cors = require('cors')({origin: false});
 
 exports.helloWorld = functions.https.onRequest((request, response) => {
@@ -14,3 +16,11 @@ exports.forgeItem = functions.https.onRequest((req, res) => {
     res.status(200).json(message);
   })
 });
+
+exports.payDay = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    let now = new Date();
+    let nextPayDay = calculator.calculateNextPayDay(now);
+    res.status(200).json({message: 'Next PayDay is ' + nextPayDay});
+  })
+})

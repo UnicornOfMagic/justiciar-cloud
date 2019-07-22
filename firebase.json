@@ -24,6 +24,10 @@
       {
         "source": "/helloWorld",
         "function": "helloWorld"
+      },
+      {
+        "source": "/payDay",
+        "function": "payDay"
       }
     ]
   }
