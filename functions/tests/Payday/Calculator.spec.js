@@ -36,5 +36,12 @@ describe('Calculator tests', () => {
       expect(payDay.getMonth()).toBe(7);
       expect(payDay.getDate()).toBe(6);
     })
+
+    it('should return December 6th when December 3rd', () => {
+      let payDay = calculator.calculateNextPayDay(new Date('12-03-2019'));
+      expect(payDay.getFullYear()).toBe(2019);
+      expect(payDay.getMonth()).toBe(11);
+      expect(payDay.getDate()).toBe(6);
+    })
   });
 });
